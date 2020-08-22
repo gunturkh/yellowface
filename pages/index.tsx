@@ -20,7 +20,18 @@ const Intro = styled.div`
   max-width: 400px;
 `;
 
-/* const WhatWeDoSection = styled.section`` */
+const WhatWeDoSection = styled.div`
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-flow: column;
+  }
+`;
+
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -70,16 +81,8 @@ export default function Home({ allPostsData }) {
         }}
       >
         <h1 className={utilStyles.headingLg}>What We Do</h1>
-        <div
-          style={{
-            display: "flex",
-            flexFlow: "row wrap",
-            justifyContent: "space-between",
-            alignItems: "space-between",
-            width: "100%",
-          }}
-        >
-          <Card style={{ maxWidth: "300px", padding: "1rem" }}>
+        <WhatWeDoSection>
+          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
             <CardContent>
               <img
                 src="/images/design-process-3.svg"
@@ -92,13 +95,8 @@ export default function Home({ allPostsData }) {
                 logo, name card, x-banner, catalog, website, etc
               </p>
             </CardContent>
-            <CardActions>
-              <Button size="small" style={{ fontFamily: "Alata" }}>
-                Learn More
-              </Button>
-            </CardActions>
           </Card>
-          <Card style={{ maxWidth: "300px", padding: "1rem" }}>
+          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
             <CardContent>
               <img
                 src="/images/mobile-marketing-3.svg"
@@ -110,35 +108,23 @@ export default function Home({ allPostsData }) {
                 We offer service to plan and design content for your social
                 media account, with caption and hashtag research
               </p>
-              <CardActions>
-                <Button size="small" style={{ fontFamily: "Alata" }}>
-                  Learn More
-                </Button>
-              </CardActions>
             </CardContent>
           </Card>
-          <Card style={{ maxWidth: "300px", padding: "1rem" }}>
+          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
             <CardContent>
               <img
                 src="/images/mobile-marketing-1.svg"
                 alt="Yellowface"
                 style={{ width: 600 }}
               />
-              <h2 className={utilStyles.headingMd}>
-                Google, Facebook, Instagram, and Tik Tok Ads
-              </h2>
+              <h2 className={utilStyles.headingMd}>Social Media Ads</h2>
               <p className={utilStyles.headingSm}>
                 We provide service for setting up advertisement on various
                 advertisement platform such as Facebook, Instagram, and Google
               </p>
-              <CardActions>
-                <Button size="small" style={{ fontFamily: "Alata" }}>
-                  Learn More
-                </Button>
-              </CardActions>
             </CardContent>
           </Card>
-        </div>
+        </WhatWeDoSection>
       </section>
       <section>
         <h1>Recent Works</h1>
