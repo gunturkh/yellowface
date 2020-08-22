@@ -1,7 +1,8 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 export default function Footer() {
   return (
@@ -14,14 +15,18 @@ export default function Footer() {
       }}
     >
       <div style={{ flex: "0 1 50%" }}>
-        <div>Let's Work Together</div>
-        <div>
+        <h2 className={utilStyles.headingLg}>Let's Talk</h2>
+        <p className={utilStyles.headingSm}>
           Want to collaborate with us? Have something to ask? You can reach us
           by email or through list of contact below.
-        </div>
-        <div>Office: Ruko Golden Land Blok L No. 3A Batam Centre</div>
-        <div>Email: hi@yellowface.co.id</div>
-        <div>Instagrram : @yellowface.co @millenial.yellowface</div>
+        </p>
+        <p className={utilStyles.headingSm}>
+          Office: Ruko Golden Land Blok L No. 3A Batam Centre
+        </p>
+        <p className={utilStyles.headingSm}>Email: hi@yellowface.co.id</p>
+        <p className={utilStyles.headingSm}>
+          Instagrram : @yellowface.co @millenial.yellowface
+        </p>
       </div>
       <div
         style={{
@@ -44,41 +49,42 @@ export default function Footer() {
             alignItems: "center",
             flex: "0 1 50%",
           }}
+          noValidate
         >
-          <input
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            autoFocus
+            id="name"
+            label="What's your name?"
             name="name"
-            type="text"
-            placeholder="Name"
-            style={{
-              padding: 5,
-              margin: 5,
-              border: "1px solid gray",
-              borderRadius: 5,
-            }}
           />
-          <input
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="What's your email?"
             name="email"
-            type="email"
-            placeholder="Your@email.com"
-            style={{
-              padding: 5,
-              margin: 5,
-              border: "1px solid gray",
-              borderRadius: 5,
-            }}
+            autoComplete="email"
+            autoFocus
           />
-          <input
-            name="text"
-            type="text"
-            placeholder="Your question/requirement"
-            style={{
-              padding: 5,
-              margin: 5,
-              border: "1px solid gray",
-              borderRadius: 5,
-            }}
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="query"
+            label="Tell us what you think!"
+            id="query"
           />
-          <button type="submit"> Submit </button>
+          <Button type="submit" fullWidth variant="contained" color="primary">
+            {" "}
+            Submit{" "}
+          </Button>
         </form>
       </div>
     </footer>

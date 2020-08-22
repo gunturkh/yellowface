@@ -1,5 +1,9 @@
 .container {
-  padding: 6rem;
+  /* padding: 6rem; */
+  max-width: 1140px;
+  margin: 0px auto;
+  padding: 0px 2rem;
+  width: 100%;
 }
 
 .header {

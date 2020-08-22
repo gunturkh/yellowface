@@ -5,6 +5,10 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import styled from "styled-components";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
 
 const Intro = styled.div`
   display: flex;
@@ -15,6 +19,8 @@ const Intro = styled.div`
   height: auto;
   max-width: 400px;
 `;
+
+/* const WhatWeDoSection = styled.section`` */
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -47,32 +53,91 @@ export default function Home({ allPostsData }) {
             </p>
           </Intro>
           <div>
-            <img src="/images/atTheOffice.gif" alt="Yellowface" />
+            <img
+              src="/images/on-the-office-animate.svg"
+              alt="Yellowface"
+              style={{ width: 600 }}
+            />
           </div>
         </div>
       </section>
-      <section>
-        <h1>What We Do</h1>
-        <div>
-          <h2>Branding</h2>
-          <p>
-            We help businesses designing their brand identity needs such as
-            logo, name card, x-banner, catalog, website, etc
-          </p>
-        </div>
-        <div>
-          <h2>Content Marketing</h2>
-          <p>
-            We offer service to plan nd design content for your social media
-            account, with caption and hashtag research
-          </p>
-        </div>
-        <div>
-          <h2>Google, Facebook, Instagram, and Tik Tok Ads</h2>
-          <p>
-            We provide service for setting up advertisement on various
-            advertisement platform such as Facebook, Instagram, and Google
-          </p>
+      <section
+        style={{
+          display: "flex",
+          flexFlow: "column wrap",
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+        }}
+      >
+        <h1 className={utilStyles.headingLg}>What We Do</h1>
+        <div
+          style={{
+            display: "flex",
+            flexFlow: "row wrap",
+            justifyContent: "space-between",
+            alignItems: "space-between",
+            width: "100%",
+          }}
+        >
+          <Card style={{ maxWidth: "300px", padding: "1rem" }}>
+            <CardContent>
+              <img
+                src="/images/design-process-3.svg"
+                alt="Yellowface"
+                style={{ width: 600 }}
+              />
+              <h2 className={utilStyles.headingMd}>Branding</h2>
+              <p className={utilStyles.headingSm}>
+                We help businesses designing their brand identity needs such as
+                logo, name card, x-banner, catalog, website, etc
+              </p>
+            </CardContent>
+            <CardActions>
+              <Button size="small" style={{ fontFamily: "Alata" }}>
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
+          <Card style={{ maxWidth: "300px", padding: "1rem" }}>
+            <CardContent>
+              <img
+                src="/images/mobile-marketing-3.svg"
+                alt="Yellowface"
+                style={{ width: 600 }}
+              />
+              <h2 className={utilStyles.headingMd}>Content Marketing</h2>
+              <p className={utilStyles.headingSm}>
+                We offer service to plan and design content for your social
+                media account, with caption and hashtag research
+              </p>
+              <CardActions>
+                <Button size="small" style={{ fontFamily: "Alata" }}>
+                  Learn More
+                </Button>
+              </CardActions>
+            </CardContent>
+          </Card>
+          <Card style={{ maxWidth: "300px", padding: "1rem" }}>
+            <CardContent>
+              <img
+                src="/images/mobile-marketing-1.svg"
+                alt="Yellowface"
+                style={{ width: 600 }}
+              />
+              <h2 className={utilStyles.headingMd}>
+                Google, Facebook, Instagram, and Tik Tok Ads
+              </h2>
+              <p className={utilStyles.headingSm}>
+                We provide service for setting up advertisement on various
+                advertisement platform such as Facebook, Instagram, and Google
+              </p>
+              <CardActions>
+                <Button size="small" style={{ fontFamily: "Alata" }}>
+                  Learn More
+                </Button>
+              </CardActions>
+            </CardContent>
+          </Card>
         </div>
       </section>
       <section>
