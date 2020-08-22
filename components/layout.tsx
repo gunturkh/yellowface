@@ -20,6 +20,10 @@ export default function Layout({ children, home }) {
             type="image/x-icon"
           />
           <link rel="icon" href="/favicon-black.ico" type="image/x-icon" />
+          <style>
+            @import
+            url('https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans:wght@300;400&display=swap');
+          </style>
           <meta
             name="description"
             content="Learn how to build a personal website using Next.js"

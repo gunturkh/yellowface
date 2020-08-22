@@ -12,10 +12,8 @@ const Intro = styled.div`
   justtify-content: center;
   alignitems: center;
   color: black;
-  /* background-image: url("/images/yellowfaceheader.png"); */
-  /* background-size: contain; */
-  /* background-repeat: no-repeat; */
-  height: 100vh;
+  height: auto;
+  max-width: 400px;
 `;
 export default function Home({ allPostsData }) {
   return (
@@ -23,22 +21,34 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        {/* <img src="/images/yellowfaceheader.png" alt="Yellowface" /> */}
-        <div className="">
+      <section>
+        <div
+          style={{
+            display: "flex",
+            flexFlow: "row wrap",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <Intro>
-            <h1>
+            <h1 className={utilStyles.headingLg}>
               Photography. Videography. Facebook Ads. Instagram Ads. Web
               Development.
             </h1>
-            <h2>
+            <p
+              className={utilStyles.headingSm}
+              style={{ fontFamily: "Open Sans" }}
+            >
               Yellowface is a digital marketing agency based in Batam,
               Indonesia. We provide help and solution for clients who want to
               upgrade their online business with services like Product
               Photography, Videography for ads, and setting their Facebook Ads
               and Instagram Ads.
-            </h2>
+            </p>
           </Intro>
+          <div>
+            <img src="/images/atTheOffice.gif" alt="Yellowface" />
+          </div>
         </div>
       </section>
       <section>
