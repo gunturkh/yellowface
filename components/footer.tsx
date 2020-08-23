@@ -81,7 +81,19 @@ export default function Footer() {
             label="Tell us what you think!"
             id="query"
           />
-          <Button type="submit" fullWidth variant="contained" color="primary">
+          {/* <Button type="submit" fullWidth variant="contained" color="primary"> */}
+          <Button
+            type="submit"
+            style={{
+              background: "linear-gradient(90deg, #ed8f03 0%,#ffb75e 100% )",
+              borderRadius: 3,
+              border: 0,
+              color: "white",
+              height: 48,
+              padding: "0 30px",
+              boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+            }}
+          >
             {" "}
             Submit{" "}
           </Button>

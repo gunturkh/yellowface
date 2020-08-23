@@ -32,6 +32,18 @@ const WhatWeDoSection = styled.div`
   }
 `;
 
+const OurWorksSection = styled.div`
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-flow: column;
+  }
+`;
+
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -126,11 +138,40 @@ export default function Home({ allPostsData }) {
           </Card>
         </WhatWeDoSection>
       </section>
-      <section>
-        <h1>Recent Works</h1>
-        <div>Photo Concept</div>
-        <div>Yearbook Photo Concept</div>
-        <div>Yearbook Photo</div>
+      <section style={{ display: "flex", flexFlow: "column" }}>
+        <h1>Our Works</h1>
+        <OurWorksSection>
+          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
+            <CardContent>
+              <img
+                src="/images/millenial.png"
+                alt="Photo Concept"
+                style={{ width: 200 }}
+              />
+              <h2 className={utilStyles.headingMd}>Photo Concept</h2>
+            </CardContent>
+          </Card>
+          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
+            <CardContent>
+              <img
+                src="/images/millenial2.png"
+                alt="Yearbook Concept"
+                style={{ width: 200 }}
+              />
+              <h2 className={utilStyles.headingMd}>Yearbook Concept</h2>
+            </CardContent>
+          </Card>
+          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
+            <CardContent>
+              <img
+                src="/images/millenial3.png"
+                alt="Yearbook Photo"
+                style={{ width: 200 }}
+              />
+              <h2 className={utilStyles.headingMd}>Yearbook Photo</h2>
+            </CardContent>
+          </Card>
+        </OurWorksSection>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
