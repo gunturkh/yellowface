@@ -8,24 +8,32 @@ export default function Footer() {
   return (
     <footer
       style={{
+        padding: "20px 0",
         borderTop: "1px solid #eaeaea",
         width: "100%",
         display: "flex",
         flexDirection: "row",
+        alignItems: "flex-start",
       }}
     >
-      <div style={{ flex: "0 1 50%" }}>
+      <div style={{ margin: 10 }}>
         <h2 className={utilStyles.headingLg}>Let's Talk</h2>
         <p className={utilStyles.headingSm}>
           Want to collaborate with us? Have something to ask? You can reach us
           by email or through list of contact below.
         </p>
+      </div>
+      <div style={{ margin: 10 }}>
         <p className={utilStyles.headingSm}>
           Office: Ruko Golden Land Blok L No. 3A Batam Centre
         </p>
+      </div>
+      <div style={{ margin: 10 }}>
         <p className={utilStyles.headingSm}>Email: hi@yellowface.co.id</p>
+      </div>
+      <div style={{ margin: 10 }}>
         <p className={utilStyles.headingSm}>
-          Instagrram : @yellowface.co @millenial.yellowface
+          Office: Ruko Golden Land Blok L No. 3A Batam Centre
         </p>
       </div>
       <div
@@ -35,8 +43,10 @@ export default function Footer() {
           justifyContent: "center",
           alignItems: "center",
           flex: "0 1 50%",
+          margin: "auto",
         }}
       >
+        {/*
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -81,7 +91,6 @@ export default function Footer() {
             label="Tell us what you think!"
             id="query"
           />
-          {/* <Button type="submit" fullWidth variant="contained" color="primary"> */}
           <Button
             type="submit"
             style={{
@@ -98,6 +107,7 @@ export default function Footer() {
             Submit{" "}
           </Button>
         </form>
+          */}
       </div>
     </footer>
   );
