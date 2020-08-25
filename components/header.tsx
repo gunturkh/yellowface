@@ -5,23 +5,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header
-      style={{
-        position: "sticky",
-        top: 0,
-        borderBottom: "1px solid #eaeaea",
-      }}
-    >
-      <nav
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          padding: 20,
-          background: "#fff",
-        }}
-      >
+    <header className={styles.header}>
+      <nav className={styles.headerNav}>
         <div style={{ margin: "5px auto 5px 5px" }}>
           <Link href="/">
             <img

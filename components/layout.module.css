@@ -7,11 +7,18 @@
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.headerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  @apply bg-white;
 }
 
 .headerImage {
