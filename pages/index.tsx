@@ -9,6 +9,7 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
+import { GetStaticProps } from "next";
 
 const Intro = styled.div`
   display: flex;
@@ -57,6 +58,8 @@ export default function Home({ allPostsData }) {
             flexFlow: "row wrap",
             justifyContent: "space-between",
             alignItems: "center",
+            padding: "0 20px",
+            /* backgroundColor: "#f7cd17", */
           }}
         >
           <Intro>
@@ -90,6 +93,7 @@ export default function Home({ allPostsData }) {
           flexFlow: "column wrap",
           justifyContent: "flex-start",
           alignItems: "flex-start",
+          padding: "0 20px",
         }}
       >
         <h1 className={utilStyles.headingLg}>What We Do</h1>
@@ -138,7 +142,9 @@ export default function Home({ allPostsData }) {
           </Card>
         </WhatWeDoSection>
       </section>
-      <section style={{ display: "flex", flexFlow: "column" }}>
+      <section
+        style={{ display: "flex", flexFlow: "column", padding: "0 20px" }}
+      >
         <h1>Our Works</h1>
         <OurWorksSection>
           <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
@@ -173,7 +179,10 @@ export default function Home({ allPostsData }) {
           </Card>
         </OurWorksSection>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section
+        className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
+        style={{ padding: "0 20px" }}
+      >
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -193,11 +202,11 @@ export default function Home({ allPostsData }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};

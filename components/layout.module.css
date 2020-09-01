@@ -1,8 +1,8 @@
 .container {
   /* padding: 6rem; */
-  max-width: 1140px;
+  /* max-width: 1140px; */
   margin: 0px auto;
-  padding: 0px 2rem;
+  /* padding: 0px 2rem; */
   width: 100%;
 }
 
@@ -18,7 +18,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  @apply bg-white;
+  background-color: #fff;
 }
 
 .headerImage {
@@ -35,3 +35,12 @@
   margin: 3rem 0 0;
 }
 
+.bgColorYellow {
+  background-color: #f7cd17;
+}
+.bgColorBlack {
+  background-color: #0c1618;
+}
+.bgColorGray {
+  background-color: #222b2d;
+}

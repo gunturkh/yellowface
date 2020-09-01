@@ -14,7 +14,9 @@ export default function Footer() {
         display: "flex",
         flexDirection: "row",
         alignItems: "flex-start",
+        color: "white",
       }}
+      className={`${styles.bgColorBlack}`}
     >
       <div style={{ margin: 10 }}>
         <h2 className={utilStyles.headingLg}>Let's Talk</h2>
