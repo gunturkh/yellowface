@@ -147,7 +147,15 @@ export default function Home({ allPostsData }) {
       >
         <h1>Our Works</h1>
         <OurWorksSection>
-          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
+          <Card
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flex: "1 1 100%",
+              padding: "1rem",
+              margin: "20px",
+            }}
+          >
             <CardContent>
               <img
                 src="/images/millenial.png"
@@ -157,7 +165,15 @@ export default function Home({ allPostsData }) {
               <h2 className={utilStyles.headingMd}>Photo Concept</h2>
             </CardContent>
           </Card>
-          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
+          <Card
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flex: "1 1 100%",
+              padding: "1rem",
+              margin: "20px",
+            }}
+          >
             <CardContent>
               <img
                 src="/images/millenial2.png"
@@ -167,7 +183,15 @@ export default function Home({ allPostsData }) {
               <h2 className={utilStyles.headingMd}>Yearbook Concept</h2>
             </CardContent>
           </Card>
-          <Card style={{ flex: "1 1 100%", padding: "1rem", margin: "20px" }}>
+          <Card
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flex: "1 1 100%",
+              padding: "1rem",
+              margin: "20px",
+            }}
+          >
             <CardContent>
               <img
                 src="/images/millenial3.png"
@@ -184,19 +208,39 @@ export default function Home({ allPostsData }) {
         style={{ padding: "0 20px" }}
       >
         <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexFlow: "row wrap",
+          }}
+        >
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+            <Card
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                padding: "1rem",
+                margin: "20px",
+                height: "100%",
+                maxWidth: 300,
+              }}
+            >
+              <CardContent>
+                <h5 className={utilStyles.listItem} key={id}>
+                  <Link href="/posts/[id]" as={`/posts/${id}`}>
+                    <a>{title}</a>
+                  </Link>
+                  <br />
+                  <small className={utilStyles.lightText}>
+                    <Date dateString={date} />
+                  </small>
+                </h5>
+              </CardContent>
+            </Card>
           ))}
-        </ul>
+        </div>
       </section>
     </Layout>
   );

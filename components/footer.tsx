@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        padding: "20px 0",
+        padding: "20px 20px",
         borderTop: "1px solid #eaeaea",
         width: "100%",
         display: "flex",
@@ -32,11 +32,6 @@ export default function Footer() {
       </div>
       <div style={{ margin: 10 }}>
         <p className={utilStyles.headingSm}>Email: hi@yellowface.co.id</p>
-      </div>
-      <div style={{ margin: 10 }}>
-        <p className={utilStyles.headingSm}>
-          Office: Ruko Golden Land Blok L No. 3A Batam Centre
-        </p>
       </div>
       <div
         style={{

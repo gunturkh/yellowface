@@ -6,7 +6,7 @@ import Header from "./header";
 import Footer from "./footer";
 
 const name = "Yellowface";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Yellowface";
 
 export default function Layout({ children, home }) {
   return (
