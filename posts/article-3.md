@@ -40,4 +40,4 @@ Dalam CTA persuasif kamu berusaha meyakinkan para audiensmu dengan berbagai hal 
 - Dll
 
 Nah, itulah macam-macam Call to Action yang perlu kamu ketahui untuk membantu menjual produkmu. Penggunaan CTA bisa maksimal apabila mampu dioptimasi dan dimanage dengan hal-hal lain seperti sosial media manajemen. Bingung memikirkan copywr
-buat konten? Serahkan saja kepada [Yellowface!](/) kami siap memberikan solusi _copywriting_ hingga _hash tag research_ untuk menghasilkan CTA yang berkualitas untuk bisnis anda. Tunggu apa lagi? [Klik disini](/)
+buat konten? Serahkan saja kepada [Yellowface!](https://yellowface.co.id) kami siap memberikan solusi _copywriting_ hingga _hash tag research_ untuk menghasilkan CTA yang berkualitas untuk bisnis anda. Tunggu apa lagi? [Klik disini](https://yellowface.co.id)

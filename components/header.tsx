@@ -6,7 +6,8 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <nav className={`${styles.headerNav} ${styles.bgColorYellow}`}>
+      {/* <nav className={`${styles.headerNav} ${styles.bgColorYellow}`}> */}
+      <nav className={`${styles.headerNav}`}>
         <div style={{ margin: "5px auto 5px 5px" }}>
           <Link href="/">
             <img
