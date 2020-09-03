@@ -11,10 +11,9 @@ export default function Footer() {
         padding: "20px 20px",
         borderTop: "1px solid #eaeaea",
         width: "100%",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "flex-start",
         color: "white",
+        display: "grid",
+        gridTemplateColumns: "3fr 2fr 2fr",
       }}
       className={`${styles.bgColorBlack}`}
     >
@@ -26,12 +25,14 @@ export default function Footer() {
         </p>
       </div>
       <div style={{ margin: 10 }}>
+        <p>Office: </p>
         <p className={utilStyles.headingSm}>
-          Office: Ruko Golden Land Blok L No. 3A Batam Centre
+          Ruko Golden Land Blok L No. 3A Batam Centre
         </p>
       </div>
       <div style={{ margin: 10 }}>
-        <p className={utilStyles.headingSm}>Email: hi@yellowface.co.id</p>
+        <p>Email</p>
+        <p className={utilStyles.headingSm}> hi@yellowface.co.id</p>
       </div>
       <div
         style={{
