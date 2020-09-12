@@ -10,6 +10,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import { GetStaticProps } from "next";
+import AliceCarousel from "react-alice-carousel";
 
 const Intro = styled.div`
   display: flex;
@@ -44,6 +45,145 @@ const OurWorksSection = styled.div`
     flex-flow: column;
   }
 `;
+
+const OurClientSection = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-flow: column;
+  }
+`;
+
+const Carousel = () => {
+  const handleOnDragStart = (e) => e.preventDefault();
+  return (
+    <AliceCarousel mouseTrackingEnabled>
+      <WhatWeDoSection>
+        <Card
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flex: "1 1 100%",
+            padding: "1rem",
+            margin: "20px",
+          }}
+          onDragStart={handleOnDragStart}
+        >
+          <CardContent>
+            <img
+              src="/images/millenial.png"
+              alt="Photo Concept"
+              style={{ width: 200 }}
+            />
+            <h2 className={utilStyles.headingMd}>Photo Concept</h2>
+          </CardContent>
+        </Card>
+        <Card
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flex: "1 1 100%",
+            padding: "1rem",
+            margin: "20px",
+          }}
+          onDragStart={handleOnDragStart}
+        >
+          <CardContent>
+            <img
+              src="/images/millenial2.png"
+              alt="Yearbook Concept"
+              style={{ width: 200 }}
+            />
+            <h2 className={utilStyles.headingMd}>Yearbook Concept</h2>
+          </CardContent>
+        </Card>
+        <Card
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flex: "1 1 100%",
+            padding: "1rem",
+            margin: "20px",
+          }}
+          onDragStart={handleOnDragStart}
+        >
+          <CardContent>
+            <img
+              src="/images/millenial3.png"
+              alt="Yearbook Photo"
+              style={{ width: 200 }}
+            />
+            <h2 className={utilStyles.headingMd}>Yearbook Photo</h2>
+          </CardContent>
+        </Card>
+      </WhatWeDoSection>
+
+      <WhatWeDoSection>
+        <Card
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flex: "1 1 100%",
+            padding: "1rem",
+            margin: "20px",
+          }}
+          onDragStart={handleOnDragStart}
+        >
+          <CardContent>
+            <img
+              src="/images/millenial.png"
+              alt="Photo Concept"
+              style={{ width: 200 }}
+            />
+            <h2 className={utilStyles.headingMd}>Photo Concept 2</h2>
+          </CardContent>
+        </Card>
+        <Card
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flex: "1 1 100%",
+            padding: "1rem",
+            margin: "20px",
+          }}
+          onDragStart={handleOnDragStart}
+        >
+          <CardContent>
+            <img
+              src="/images/millenial2.png"
+              alt="Yearbook Concept"
+              style={{ width: 200 }}
+            />
+            <h2 className={utilStyles.headingMd}>Yearbook Concept 2</h2>
+          </CardContent>
+        </Card>
+        <Card
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flex: "1 1 100%",
+            padding: "1rem",
+            margin: "20px",
+          }}
+          onDragStart={handleOnDragStart}
+        >
+          <CardContent>
+            <img
+              src="/images/millenial3.png"
+              alt="Yearbook Photo"
+              style={{ width: 200 }}
+            />
+            <h2 className={utilStyles.headingMd}>Yearbook Photo 2</h2>
+          </CardContent>
+        </Card>
+      </WhatWeDoSection>
+    </AliceCarousel>
+  );
+};
 
 export default function Home({ allPostsData }) {
   return (
@@ -145,63 +285,40 @@ export default function Home({ allPostsData }) {
       <section
         style={{ display: "flex", flexFlow: "column", padding: "0 20px" }}
       >
+        <h1>Some Of Our Clients </h1>
+        <OurClientSection>
+          <img
+            src="/images/aston.png"
+            alt="Aston Inn Gideon Batam"
+            style={{ width: 200 }}
+          />
+          <img
+            src="/images/bdp.jpeg"
+            alt="BPR Dana Putra"
+            style={{ width: 200 }}
+          />
+          <img
+            src="/images/bluefire.png"
+            alt="Bluefire Bar & Resto"
+            style={{ width: 200 }}
+          />
+          <img
+            src="/images/satya.png"
+            alt="BPR Satya Mitra Andalan"
+            style={{ width: 200 }}
+          />
+          <img
+            src="/images/ug.png"
+            alt="Underground Game Store"
+            style={{ width: 200 }}
+          />
+        </OurClientSection>
+      </section>
+      <section
+        style={{ display: "flex", flexFlow: "column", padding: "0 20px" }}
+      >
         <h1>Our Works</h1>
-        <OurWorksSection>
-          <Card
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              flex: "1 1 100%",
-              padding: "1rem",
-              margin: "20px",
-            }}
-          >
-            <CardContent>
-              <img
-                src="/images/millenial.png"
-                alt="Photo Concept"
-                style={{ width: 200 }}
-              />
-              <h2 className={utilStyles.headingMd}>Photo Concept</h2>
-            </CardContent>
-          </Card>
-          <Card
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              flex: "1 1 100%",
-              padding: "1rem",
-              margin: "20px",
-            }}
-          >
-            <CardContent>
-              <img
-                src="/images/millenial2.png"
-                alt="Yearbook Concept"
-                style={{ width: 200 }}
-              />
-              <h2 className={utilStyles.headingMd}>Yearbook Concept</h2>
-            </CardContent>
-          </Card>
-          <Card
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              flex: "1 1 100%",
-              padding: "1rem",
-              margin: "20px",
-            }}
-          >
-            <CardContent>
-              <img
-                src="/images/millenial3.png"
-                alt="Yearbook Photo"
-                style={{ width: 200 }}
-              />
-              <h2 className={utilStyles.headingMd}>Yearbook Photo</h2>
-            </CardContent>
-          </Card>
-        </OurWorksSection>
+        {Carousel()}
       </section>
       <section
         className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
