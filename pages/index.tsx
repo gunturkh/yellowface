@@ -10,7 +10,13 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import { GetStaticProps } from "next";
-import AliceCarousel from "react-alice-carousel";
+import {
+  FlickingEvent,
+  SelectEvent,
+  ChangeEvent,
+  NeedPanelEvent,
+} from "@egjs/flicking";
+import Flicking from "@egjs/react-flicking";
 
 const Intro = styled.div`
   display: flex;
@@ -61,7 +67,44 @@ const OurClientSection = styled.div`
 const Carousel = () => {
   const handleOnDragStart = (e) => e.preventDefault();
   return (
-    <AliceCarousel mouseTrackingEnabled>
+    <Flicking
+      tag="div"
+      viewportTag="div"
+      cameraTag="div"
+      onNeedPanel={(e: NeedPanelEvent) => {}}
+      onMoveStart={(e: FlickingEvent) => {}}
+      onMove={(e: FlickingEvent) => {}}
+      onMoveEnd={(e: FlickingEvent) => {}}
+      onHoldStart={(e: FlickingEvent) => {}}
+      onHoldEnd={(e: FlickingEvent) => {}}
+      onRestore={(e: FlickingEvent) => {}}
+      onSelect={(e: SelectEvent) => {}}
+      onChange={(e: ChangeEvent) => {}}
+      classPrefix="eg-flick"
+      deceleration={0.0075}
+      horizontal={true}
+      circular={false}
+      infinite={false}
+      infiniteThreshold={0}
+      lastIndex={Infinity}
+      threshold={40}
+      duration={100}
+      panelEffect={(x) => 1 - Math.pow(1 - x, 3)}
+      defaultIndex={0}
+      inputType={["touch", "mouse"]}
+      thresholdAngle={45}
+      bounce={10}
+      autoResize={false}
+      adaptive={false}
+      zIndex={2000}
+      bound={false}
+      overflow={false}
+      hanger={"50%"}
+      anchor={"50%"}
+      gap={0}
+      moveType={{ type: "snap", count: 1 }}
+      collectStatistics={true}
+    >
       <WhatWeDoSection>
         <Card
           style={{
@@ -181,7 +224,7 @@ const Carousel = () => {
           </CardContent>
         </Card>
       </WhatWeDoSection>
-    </AliceCarousel>
+    </Flicking>
   );
 };
 

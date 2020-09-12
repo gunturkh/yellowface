@@ -20,11 +20,38 @@ export default function Projects({ allPostsData }) {
             Responsible for planning all their social media content start from
             concept planning, copywriting, and hashtag research.
           </p>
-          <img
-            src="/images/millenial.png"
-            alt="Photo Concept"
-            style={{ width: 200 }}
-          />
+          <div style={{ display: "flex", flexFlow: "row wrap" }}>
+            <img
+              src="/images/bprsatya-1.png"
+              alt="Photo Concept"
+              style={{ width: 200 }}
+            />
+            <img
+              src="/images/bprsatya-2.png"
+              alt="Photo Concept"
+              style={{ width: 200 }}
+            />
+            <img
+              src="/images/bpd-1.png"
+              alt="Photo Concept"
+              style={{ width: 200 }}
+            />
+            <img
+              src="/images/bpd-2.png"
+              alt="Photo Concept"
+              style={{ width: 200 }}
+            />
+            <img
+              src="/images/ug-1.png"
+              alt="Photo Concept"
+              style={{ width: 200 }}
+            />
+            <img
+              src="/images/ug-2.png"
+              alt="Photo Concept"
+              style={{ width: 200 }}
+            />
+          </div>
         </div>
         <div>
           <h1>Photo Product</h1>
