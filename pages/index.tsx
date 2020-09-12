@@ -80,15 +80,14 @@ const Carousel = () => {
       onRestore={(e: FlickingEvent) => {}}
       onSelect={(e: SelectEvent) => {}}
       onChange={(e: ChangeEvent) => {}}
-      classPrefix="eg-flick"
       deceleration={0.0075}
       horizontal={true}
-      circular={false}
+      circular={true}
       infinite={false}
       infiniteThreshold={0}
       lastIndex={Infinity}
       threshold={40}
-      duration={100}
+      duration={300}
       panelEffect={(x) => 1 - Math.pow(1 - x, 3)}
       defaultIndex={0}
       inputType={["touch", "mouse"]}
@@ -101,129 +100,42 @@ const Carousel = () => {
       overflow={false}
       hanger={"50%"}
       anchor={"50%"}
-      gap={0}
+      gap={50}
       moveType={{ type: "snap", count: 1 }}
       collectStatistics={true}
     >
-      <WhatWeDoSection>
-        <Card
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flex: "1 1 100%",
-            padding: "1rem",
-            margin: "20px",
-          }}
-          onDragStart={handleOnDragStart}
-        >
-          <CardContent>
-            <img
-              src="/images/millenial.png"
-              alt="Photo Concept"
-              style={{ width: 200 }}
-            />
-            <h2 className={utilStyles.headingMd}>Photo Concept</h2>
-          </CardContent>
-        </Card>
-        <Card
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flex: "1 1 100%",
-            padding: "1rem",
-            margin: "20px",
-          }}
-          onDragStart={handleOnDragStart}
-        >
-          <CardContent>
-            <img
-              src="/images/millenial2.png"
-              alt="Yearbook Concept"
-              style={{ width: 200 }}
-            />
-            <h2 className={utilStyles.headingMd}>Yearbook Concept</h2>
-          </CardContent>
-        </Card>
-        <Card
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flex: "1 1 100%",
-            padding: "1rem",
-            margin: "20px",
-          }}
-          onDragStart={handleOnDragStart}
-        >
-          <CardContent>
-            <img
-              src="/images/millenial3.png"
-              alt="Yearbook Photo"
-              style={{ width: 200 }}
-            />
-            <h2 className={utilStyles.headingMd}>Yearbook Photo</h2>
-          </CardContent>
-        </Card>
-      </WhatWeDoSection>
-
-      <WhatWeDoSection>
-        <Card
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flex: "1 1 100%",
-            padding: "1rem",
-            margin: "20px",
-          }}
-          onDragStart={handleOnDragStart}
-        >
-          <CardContent>
-            <img
-              src="/images/millenial.png"
-              alt="Photo Concept"
-              style={{ width: 200 }}
-            />
-            <h2 className={utilStyles.headingMd}>Photo Concept 2</h2>
-          </CardContent>
-        </Card>
-        <Card
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flex: "1 1 100%",
-            padding: "1rem",
-            margin: "20px",
-          }}
-          onDragStart={handleOnDragStart}
-        >
-          <CardContent>
-            <img
-              src="/images/millenial2.png"
-              alt="Yearbook Concept"
-              style={{ width: 200 }}
-            />
-            <h2 className={utilStyles.headingMd}>Yearbook Concept 2</h2>
-          </CardContent>
-        </Card>
-        <Card
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flex: "1 1 100%",
-            padding: "1rem",
-            margin: "20px",
-          }}
-          onDragStart={handleOnDragStart}
-        >
-          <CardContent>
-            <img
-              src="/images/millenial3.png"
-              alt="Yearbook Photo"
-              style={{ width: 200 }}
-            />
-            <h2 className={utilStyles.headingMd}>Yearbook Photo 2</h2>
-          </CardContent>
-        </Card>
-      </WhatWeDoSection>
+      {/* <WhatWeDoSection> */}
+      <img
+        src="/images/millenial.png"
+        alt="Photo Concept"
+        style={{ width: 200 }}
+      />
+      <img
+        src="/images/millenial2.png"
+        alt="Yearbook Concept"
+        style={{ width: 200 }}
+      />
+      <img
+        src="/images/millenial3.png"
+        alt="Yearbook Photo"
+        style={{ width: 200 }}
+      />
+      <img
+        src="/images/millenial.png"
+        alt="Photo Concept"
+        style={{ width: 200 }}
+      />
+      <img
+        src="/images/millenial2.png"
+        alt="Yearbook Concept"
+        style={{ width: 200 }}
+      />
+      <img
+        src="/images/millenial3.png"
+        alt="Yearbook Photo"
+        style={{ width: 200 }}
+      />
+      {/* </WhatWeDoSection> */}
     </Flicking>
   );
 };

@@ -10,6 +10,7 @@
   position: sticky;
   top: 0;
   border-bottom: 1px solid #eaeaea;
+  z-index: 9999;
 }
 
 .headerNav {
