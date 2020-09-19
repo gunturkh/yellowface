@@ -40,29 +40,28 @@ const WhatWeDoSection = styled.div`
   }
 `;
 
-const OurWorksSection = styled.div`
+const OurClientSection = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+`;
+
+const BlogCardSection = styled.div`
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  /* min-height: 300px; */
+  justify-content: center;
   @media (max-width: 768px) {
-    justify-content: center;
     flex-flow: column;
+    align-items: center;
   }
 `;
 
-const OurClientSection = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  @media (max-width: 768px) {
-    justify-content: center;
-    flex-flow: column;
+const BlogTitle = styled.div`
+  &:hover {
+    text-decoration: underline;
   }
-`;
+`
 
 const Carousel = () => {
   const handleOnDragStart = (e) => e.preventDefault();
@@ -104,7 +103,6 @@ const Carousel = () => {
       moveType={{ type: "snap", count: 1 }}
       collectStatistics={true}
     >
-      {/* <WhatWeDoSection> */}
       <img
         src="/images/millenial.png"
         alt="Photo Concept"
@@ -121,21 +119,20 @@ const Carousel = () => {
         style={{ width: 200 }}
       />
       <img
-        src="/images/millenial.png"
-        alt="Photo Concept"
+        src="/images/bprsatya-ig.png"
+        alt="BPR Satya Mitra Andalan"
         style={{ width: 200 }}
       />
       <img
-        src="/images/millenial2.png"
-        alt="Yearbook Concept"
+        src="/images/bpd-ig.png"
+        alt="BPR Dana Putra"
         style={{ width: 200 }}
       />
       <img
-        src="/images/millenial3.png"
-        alt="Yearbook Photo"
+        src="/images/ug-ig.png"
+        alt="Underground Gaming Store"
         style={{ width: 200 }}
       />
-      {/* </WhatWeDoSection> */}
     </Flicking>
   );
 };
@@ -276,18 +273,11 @@ export default function Home({ allPostsData }) {
         {Carousel()}
       </section>
       <section
-        className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
+        className={`${utilStyles.padding1px}`}
         style={{ padding: "0 20px" }}
       >
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexFlow: "row wrap",
-          }}
-        >
+        <h2>Recent Post</h2>
+        <BlogCardSection>
           {allPostsData.map(({ id, date, title }) => (
             <Card
               style={{
@@ -295,24 +285,24 @@ export default function Home({ allPostsData }) {
                 justifyContent: "center",
                 padding: "1rem",
                 margin: "20px",
-                height: "100%",
+                minHeight: 200,
                 maxWidth: 300,
               }}
             >
               <CardContent>
                 <h5 className={utilStyles.listItem} key={id}>
                   <Link href="/posts/[id]" as={`/posts/${id}`}>
-                    <a>{title}</a>
+                    <BlogTitle>{title}</BlogTitle>
                   </Link>
                   <br />
-                  <small className={utilStyles.lightText}>
+                  <small >
                     <Date dateString={date} />
                   </small>
                 </h5>
               </CardContent>
             </Card>
           ))}
-        </div>
+        </BlogCardSection>
       </section>
     </Layout>
   );

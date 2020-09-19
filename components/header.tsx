@@ -19,11 +19,11 @@ export default function Header() {
           </Link>
         </div>
         <div style={{ margin: 5 }}>
-          <Link href="/about">About</Link>
-        </div>
-        <div style={{ margin: 5 }}>
           <Link href="/projects">Projects</Link>
         </div>
+        {/* <div style={{ margin: 5 }}> */}
+        {/*   <Link href="/about">About Us</Link> */}
+        {/* </div> */}
       </nav>
     </header>
   );
