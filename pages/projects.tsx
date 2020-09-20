@@ -216,17 +216,17 @@ export default function Projects() {
             }}
           >
             <img
-              src="/images/ads1.png"
+              src="/images/ads1.PNG"
               alt="Facebook Ads"
               style={{ width: 200 }}
             />
             <img
-              src="/images/ads2.png"
+              src="/images/ads2.PNG"
               alt="Facebook Ads"
               style={{ width: 200 }}
             />
             <img
-              src="/images/ads3.png"
+              src="/images/ads3.PNG"
               alt="Facebook Ads"
               style={{ width: 200 }}
             />

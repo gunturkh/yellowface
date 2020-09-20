@@ -40,6 +40,18 @@ const WhatWeDoSection = styled.div`
   }
 `;
 
+const OurWorksSection = styled.div`
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-flow: column;
+  }
+`;
+
 const OurClientSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -108,16 +120,6 @@ const Carousel = () => {
         alt="Photo Concept"
         style={{ width: 200 }}
       />
-      {/* <img */}
-      {/*   src="/images/millenial2.png" */}
-      {/*   alt="Yearbook Concept" */}
-      {/*   style={{ width: 200 }} */}
-      {/* /> */}
-      {/* <img */}
-      {/*   src="/images/millenial3.png" */}
-      {/*   alt="Yearbook Photo" */}
-      {/*   style={{ width: 200 }} */}
-      {/* /> */}
       <img
         src="/images/bprsatya-ig.png"
         alt="BPR Satya Mitra Andalan"
@@ -267,10 +269,32 @@ export default function Home({ allPostsData }) {
         </OurClientSection>
       </section>
       <section
-        // style={{ display: "flex", flexFlow: "column", padding: "0 20px" }}
+         style={{ display: "flex", flexFlow: "column", padding: "0 20px" }}
       >
         <h1>Our Works</h1>
-        {Carousel()}
+        {/* {Carousel()} */}
+        <OurWorksSection>
+          <img
+            src="/images/millenial.png"
+            alt="Photo Concept"
+            style={{ width: 200 }}
+          />
+          <img
+            src="/images/bprsatya-ig.png"
+            alt="BPR Satya Mitra Andalan"
+            style={{ width: 200 }}
+          />
+          <img
+            src="/images/bpd-ig.png"
+            alt="BPR Dana Putra"
+            style={{ width: 200 }}
+          />
+          <img
+            src="/images/ug-ig.png"
+            alt="Underground Gaming Store"
+            style={{ width: 200 }}
+          />
+          </OurWorksSection>
       </section>
       <section
         className={`${utilStyles.padding1px}`}
