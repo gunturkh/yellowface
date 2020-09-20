@@ -267,7 +267,7 @@ export default function Home({ allPostsData }) {
         </OurClientSection>
       </section>
       <section
-        style={{ display: "flex", flexFlow: "column", padding: "0 20px" }}
+        // style={{ display: "flex", flexFlow: "column", padding: "0 20px" }}
       >
         <h1>Our Works</h1>
         {Carousel()}

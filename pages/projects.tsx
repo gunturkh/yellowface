@@ -144,7 +144,32 @@ export default function Projects() {
           <p>
             We set up and take various photo of client's product for their social media and e-commerce website needs.
           </p>
-          {Carousel()}
+          {/* {Carousel()} */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              justifyItems: "center",
+              /* flexFlow: "row wrap", */
+              /* justifyContent: "center", */
+            }}
+          >
+            <img
+              src="/images/VENOM-7.jpg"
+              alt="Photo Product"
+              style={{ maxHeight: 200 }}
+            />
+            <img
+              src="/images/VENOM-8.jpg"
+              alt="Photo Product"
+              style={{ maxHeight: 200 }}
+            />
+            <img
+              src="/images/VENOM-9.jpg"
+              alt="Photo Product"
+              style={{ maxHeight: 200 }}
+            />
+          </div>
         </div>
         <div>
           <h1>Yearbook Photo</h1>
