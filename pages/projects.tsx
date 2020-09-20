@@ -14,7 +14,7 @@ import {
 import Flicking from "@egjs/react-flicking";
 
 const Carousel = () => {
-  const handleOnDragStart = (e) => e.preventDefault();
+  /* const handleOnDragStart = (e) => e.preventDefault(); */
   return (
     <Flicking
       tag="div"
@@ -101,7 +101,7 @@ const Carousel = () => {
     </Flicking>
   );
 };
-export default function Projects({ allPostsData }) {
+export default function Projects() {
   return (
     <Layout home>
       <Head>
@@ -191,17 +191,17 @@ export default function Projects({ allPostsData }) {
             }}
           >
             <img
-              src="/images/ads-1.png"
+              src="/images/ads1.png"
               alt="Facebook Ads"
               style={{ width: 200 }}
             />
             <img
-              src="/images/ads-2.png"
+              src="/images/ads2.png"
               alt="Facebook Ads"
               style={{ width: 200 }}
             />
             <img
-              src="/images/ads-3.png"
+              src="/images/ads3.png"
               alt="Facebook Ads"
               style={{ width: 200 }}
             />

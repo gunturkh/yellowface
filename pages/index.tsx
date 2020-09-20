@@ -64,7 +64,7 @@ const BlogTitle = styled.div`
 `
 
 const Carousel = () => {
-  const handleOnDragStart = (e) => e.preventDefault();
+  /* const handleOnDragStart = (e) => e.preventDefault(); */
   return (
     <Flicking
       tag="div"
@@ -108,16 +108,16 @@ const Carousel = () => {
         alt="Photo Concept"
         style={{ width: 200 }}
       />
-      <img
-        src="/images/millenial2.png"
-        alt="Yearbook Concept"
-        style={{ width: 200 }}
-      />
-      <img
-        src="/images/millenial3.png"
-        alt="Yearbook Photo"
-        style={{ width: 200 }}
-      />
+      {/* <img */}
+      {/*   src="/images/millenial2.png" */}
+      {/*   alt="Yearbook Concept" */}
+      {/*   style={{ width: 200 }} */}
+      {/* /> */}
+      {/* <img */}
+      {/*   src="/images/millenial3.png" */}
+      {/*   alt="Yearbook Photo" */}
+      {/*   style={{ width: 200 }} */}
+      {/* /> */}
       <img
         src="/images/bprsatya-ig.png"
         alt="BPR Satya Mitra Andalan"
