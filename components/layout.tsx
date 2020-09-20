@@ -27,14 +27,18 @@ export default function Layout({ children, home }) {
           </style>
           <meta
             name="description"
-            content="Learn how to build a personal website using Next.js"
+            content="Design Graphic, Social Media Content, and Digital Marketing Agency in Batam, Indonesia"
           />
-          <meta
-            property="og:image"
-            content={`https://og-image.now.sh/${encodeURI(
-              siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
+          {/* <meta property="og:title" content="The Rock" /> */}
+          {/* <meta property="og:type" content="video.movie" /> */}
+          {/* <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" /> */}
+          <meta property="og:image" content="/yellowface.png" />
+          {/* <meta */}
+          {/*   property="og:image" */}
+          {/*   content={`https://og-image.now.sh/${encodeURI( */}
+          {/*     siteTitle */}
+          {/*   )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`} */}
+          {/* /> */}
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
