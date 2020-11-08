@@ -120,6 +120,8 @@ export default function Projects() {
               display: "flex",
               flexFlow: "row wrap",
               justifyContent: "space-around",
+              alignItems: "center",
+              width: "100%"
             }}
           >
             <img
@@ -182,6 +184,8 @@ export default function Projects() {
               display: "flex",
               flexFlow: "row wrap",
               justifyContent: "space-around",
+              alignItems: "center",
+              width: "100%"
             }}
           >
             <img
@@ -213,6 +217,8 @@ export default function Projects() {
               display: "flex",
               flexFlow: "row wrap",
               justifyContent: "space-around",
+              alignItems: "center",
+              width: "100%"
             }}
           >
             <img
