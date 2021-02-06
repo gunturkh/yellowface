@@ -27,7 +27,7 @@ export default function Footer() {
       <div style={{ margin: 10 }}>
         <p>Office: </p>
         <p className={utilStyles.headingSm}>
-          Ruko Golden Land Blok L No. 3A Batam Centre
+          Ansley View Tahap 2 Blok F No 22A
         </p>
       </div>
       <div style={{ margin: 10 }}>
