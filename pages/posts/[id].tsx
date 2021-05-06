@@ -11,11 +11,24 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article style={{ padding: "0 20px" }}>
+      <article style={{ padding: "0 100px"}}>
+      <div style={{textAlign: "center"}} >
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
+        <div className={utilStyles.lightText}>
+        {postData?.penulis ? `Penulis: ${postData.penulis}` : 'Yellowface'}
+        </div>
+        {postData?.instagram &&
+          (
+            <div className={utilStyles.lightText}>
+            { `Instagram: ${postData.instagram}` }
+            </div>
+        )
+        }
+        </div>
+
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
