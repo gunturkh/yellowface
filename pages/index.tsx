@@ -71,7 +71,8 @@ const BlogCardSection = styled.div`
 
 const BlogTitle = styled.div`
   &:hover {
-    text-decoration: underline;
+    color: #feaa25;
+    cursor: pointer;
   }
 `
 
