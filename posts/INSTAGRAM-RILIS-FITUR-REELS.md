@@ -9,7 +9,7 @@ Baru-baru ini Instagram resmi meluncurkan fitur Reels yang mirip dengan aplikasi
 
 <!-- ![Sumber: https://www.techieapps.com/how-to-generate-engaging-video-content-using-instagram-reels/](/images/article-5-1.png) -->
 <p align="center">
-  <img width="840" height="400" src="/images/article-5-1.png">
+  <img width="100%" src="/images/article-5-1.png">
   <p align="center">Sumber: <a href="https://www.techieapps.com/how-to-generate-engaging-video-content-using-instagram-reels/">https://www.techieapps.com/how-to-generate-engaging-video-content-using-instagram-reels/</a> </p>
 </p>
 
